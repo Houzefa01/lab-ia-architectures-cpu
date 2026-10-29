@@ -1,0 +1,14 @@
+# RAISONS D'ÉCHEC — 10 candidats testés
+
+| # | Nom | Mécanisme (1 phrase) | Critère(s) d'échec | Raison technique précise |
+|---|-----|---------------------|--------------------|-------------------------|
+| 1 | KVMemory v1 | Attention linéaire élément-par-élément avec cumsum O(T·D) | LM (15.2 vs 15.0 Baseline @300 steps) | Le cumsum élément-par-élément ne fait pas de cross-feature mixing : chaque dimension de l'état KV est mise à jour indépendamment, ce qui empêche le modèle de combiner les informations entre dimensions pour la modélisation de langage |
+| 2 | KVMemory v2 | Attention linéaire D×D exacte vectorisée O(T·D²) | LM (15.13 vs 15.02 @300 steps), Vitesse (1/7 longueurs) | Le produit D×D exact préserve le cross-feature mixing mais la normalisation linéaire (sum) ne produit pas la même distribution que softmax ; de plus O(T·D²) ne devient avantageux qu'à très grand T (≥2048) |
+| 3 | KVMemory v3 | Attention locale en chunks C=64 disjoints | Copy (1.8% vs 100% @3000 steps) | Les chunks non-chevauchement isolent l'info : un token à la position 190 ne peut pas regarder les tokens aux positions 1-3 (gap=186), même via connexions résiduelles |
+| 4 | CDCN | Convolutions causales dilatées (WaveNet, L=8, champ 255) | Copy (1.7% vs 100% @3000 steps) | Les convolutions dilatées sont translation-équivariantes : impossible de sélectionner une position spécifique pour le rappel associatif |
+| 5 | CDCN-Attn | 7 convs dilatées + 1 attention causale en tête | Copy (17.5% vs 100% @3000 steps) | Les 7 convs transforment trop les features ; l'attention reçoit des représentations trop abstraites pour le rappel associatif |
+| 6 | RetNet récurrent | Retention causale (QK exact + decay gamma) boucle Python | Vitesse (7× plus lent à TOUTES les longueurs) | La boucle Python sur T positions empêche toute vectorisation ; l'overhead interpréteur domine |
+| 7 | RetNet chunké | Retention chunkée (intra-chunk decay + cross-chunk S) | LM (8.07 vs 7.59 @3000 steps) | Le decay gamma^{t-tau} pénalise trop les positions lointaines en LM ; softmax normalise mieux |
+| 8 | RetNet multi-gamma (0.9, 0.999) | Retention avec gamma court (0.9) et long (0.999) par tête | Copy (87.6% vs 100%) | 0.9^{190} ≈ 2×10⁻⁹ du signal : tête gamma=0.9 tue le rappel longue distance. Le mixing linéaire des têtes dilue le signal long |
+| 9 | Sliding Window (W=64) | Attention softmax avec fenêtre coulissante W=64 | Vitesse (ex æquo avec Baseline) | PyTorch ne supporte pas le banded matmul natif sur CPU : matrice T×T créée puis masquée → aussi lent que full attention |
+| 10 | Mamba SSM sélectif | SSM récurrent avec A,B,C,Δ dépendants de l'input (N=16) | Copy (1.9%), LM (7.86 vs 7.64) | L'état SSM N=16 accumule l'info via transformations linéaires qui écrasent l'info positionnelle. Même sélectif, le SSM ne peut pas « pointer » vers une position spécifique |

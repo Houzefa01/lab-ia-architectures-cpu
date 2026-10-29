@@ -1,0 +1,11 @@
+{
+  "model": "#17-v2",
+  "acc_exact": 0.0,
+  "acc_digit": 0.12060546875,
+  "v1_digit": 0.116,
+  "hasard": 0.1,
+  "acces_hdd_par_token": 0.03515625,
+  "gate_remplissage": 0.007877903059124947,
+  "gate_valeur": 0.007763992063701153,
+  "alpha": 0.5029881000518799
+}

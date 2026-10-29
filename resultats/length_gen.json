@@ -1,0 +1,10 @@
+{
+  "seq_len": 256,
+  "steps": 2000,
+  "ppl_global": 8.950047761828476,
+  "ppl_pos_0_128": 8.987362365098587,
+  "ppl_pos_128_256": 8.912888573699098,
+  "exploite_contexte_long": true,
+  "causal_diff_T256": 0.0,
+  "note": "pos_emb absolues -> fonctionne jusqu'\u00e0 max_seq_len. Extension STRICTE au-del\u00e0 de la longueur d'entra\u00eenement n\u00e9cessite RoPE/ALiBi (recommandation), petit changement compatible avec le design par blocs."
+}

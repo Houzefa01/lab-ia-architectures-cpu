@@ -1,0 +1,13 @@
+{
+  "ppl_fp32": 8.950047761828476,
+  "ppl_int8": 9.057726775146689,
+  "delta_ppl_int8": 0.10767901331821328,
+  "params_total": 173056,
+  "params_linear": 151616,
+  "size_fp32_bytes": 692224,
+  "size_int8_bytes": 237376,
+  "size_int4_bytes_est": 161568.0,
+  "reduction_int8": 2.916149905634942,
+  "reduction_int4_est": 4.28441275500099,
+  "note": "int8 dynamique = r\u00e9el (torch.ao). int4 = estimation de taille (l'ex\u00e9cution int4 CPU r\u00e9elle passe par GGUF/llama.cpp-style, hors PyTorch natif)."
+}

@@ -1,0 +1,68 @@
+{
+  "model": "BlockLocalTransformer",
+  "seed": 42,
+  "steps": 3000,
+  "final_copy_accuracy": 1.0,
+  "gate_threshold": 0.95,
+  "passed": true,
+  "loss_curve": [
+    233.353,
+    64.2716,
+    23.3074,
+    9.8846,
+    6.2204,
+    5.0799,
+    4.8825
+  ],
+  "accuracy_trajectory": [
+    {
+      "step": 0,
+      "test_acc": 0.0195
+    },
+    {
+      "step": 500,
+      "test_acc": 1.0
+    },
+    {
+      "step": 1000,
+      "test_acc": 1.0
+    },
+    {
+      "step": 1500,
+      "test_acc": 1.0
+    },
+    {
+      "step": 2000,
+      "test_acc": 1.0
+    },
+    {
+      "step": 2500,
+      "test_acc": 1.0
+    },
+    {
+      "step": 2999,
+      "test_acc": 1.0
+    }
+  ],
+  "wall_time_s": 1039.9412783029838,
+  "config": {
+    "vocab_size": 10,
+    "dim": 64,
+    "heads": 2,
+    "layers": 3,
+    "ffn_dim": 256,
+    "max_seq_len": 192,
+    "block_size": 64,
+    "gap": 186,
+    "batch": 32,
+    "n_train": 8000,
+    "n_test": 2000,
+    "optimizer": "AdamW",
+    "lr": 0.0001,
+    "weight_decay": 0.01,
+    "scheduler": "CosineAnnealingLR",
+    "n_params": 161920,
+    "train_seed": 42,
+    "test_seed": 43
+  }
+}

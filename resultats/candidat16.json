@@ -1,0 +1,11 @@
+{
+  "N_slots": 262144,
+  "M_associations": 2000,
+  "K_lus_par_token": 32,
+  "recall_global": 1.0,
+  "memoire_disque_MB": 67.108864,
+  "octets_lus_par_token": 8192,
+  "fraction_lue_par_token": 0.0001220703125,
+  "params_raisonneur": 289024,
+  "hdd_150MBs_temps_lecture_par_token_ms": 0.05461333333333333
+}

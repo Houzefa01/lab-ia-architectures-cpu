@@ -1,0 +1,27 @@
+{
+  "config": "max_seq_len=128, 3000 steps, hparams identiques, eval FIXE",
+  "baseline_128": {
+    "42": 7.7843133186839975,
+    "n_params": 164864,
+    "43": 7.813177131445115,
+    "44": 7.708983475508617,
+    "mean": 7.768824641879243
+  },
+  "block_local_128": {
+    "42": 7.786090894509463,
+    "n_params": 164864,
+    "43": 7.813177131445115,
+    "44": 7.708982510577111,
+    "mean": 7.7694168455105626
+  },
+  "paired_deltas": {
+    "42": 0.0017775758254652274,
+    "43": 0.0,
+    "44": -9.649315062532082e-07
+  },
+  "wilcoxon": {
+    "error": "No module named 'scipy'",
+    "note": "n=3 trop petit ou scipy absent; se fier aux moyennes/deltas"
+  },
+  "interpretation": "baseline@128 mean=7.7688, block_local@128 mean=7.7694, delta_moyen=+0.0006. Si |delta| est dans le bruit inter-seed et baseline@128 lui-meme > 7.64, alors le gate 7.64 (mesure a max_seq_len=4096) ne s'applique pas a conditions egales."
+}

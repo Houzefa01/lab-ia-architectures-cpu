@@ -1,0 +1,80 @@
+{
+  "model": "BlockLocalTransformer",
+  "seed": 42,
+  "steps": 3000,
+  "final_perplexity": 7.802138735363724,
+  "final_mean_ce": 2.0543978929519655,
+  "gate_threshold": 7.64,
+  "baseline_ppl": 7.59,
+  "passed": false,
+  "loss_curve": [
+    {
+      "step": 1,
+      "train_loss": 4.169552803039551,
+      "running_loss": 4.169552803039551,
+      "lr": 0.0,
+      "elapsed_s": 0.5290162563323975
+    },
+    {
+      "step": 500,
+      "train_loss": 2.4234514236450195,
+      "running_loss": 2.4643948768861135,
+      "lr": 0.00028416150045992627,
+      "elapsed_s": 142.04409837722778
+    },
+    {
+      "step": 1000,
+      "train_loss": 2.302748918533325,
+      "running_loss": 2.2861578044418494,
+      "lr": 0.0002357861099654323,
+      "elapsed_s": 282.09879899024963
+    },
+    {
+      "step": 1500,
+      "train_loss": 2.147289752960205,
+      "running_loss": 2.1499893883582306,
+      "lr": 0.0001640224767952462,
+      "elapsed_s": 409.4153378009796
+    },
+    {
+      "step": 2000,
+      "train_loss": 2.050570011138916,
+      "running_loss": 2.060263872566789,
+      "lr": 8.80996085032436e-05,
+      "elapsed_s": 545.941878080368
+    },
+    {
+      "step": 2500,
+      "train_loss": 2.076892614364624,
+      "running_loss": 2.0127705708213184,
+      "lr": 2.836097633532032e-05,
+      "elapsed_s": 697.3762836456299
+    },
+    {
+      "step": 3000,
+      "train_loss": 2.0192337036132812,
+      "running_loss": 1.9988572784627077,
+      "lr": 8.134985378114167e-07,
+      "elapsed_s": 819.1836454868317
+    }
+  ],
+  "wall_time_s": 832.1184611320496,
+  "train_time_s": 819.1837525367737,
+  "hyperparams": {
+    "vocab_size": 65,
+    "dim": 64,
+    "heads": 2,
+    "layers": 3,
+    "ffn_dim": 256,
+    "block_size": 64,
+    "max_seq_len": 128,
+    "batch_size": 32,
+    "seq_len": 128,
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "warmup_steps": 100,
+    "grad_clip": 1.0,
+    "eval_batches": 100,
+    "n_params": 164864
+  }
+}

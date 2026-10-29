@@ -1,0 +1,13 @@
+{
+  "model": "#18 retriever exact",
+  "acc_exact_RAM": 0.9290865384615384,
+  "acc_digit_RAM": 0.95703125,
+  "acc_exact_DISQUE": 0.9146634615384616,
+  "acc_digit_DISQUE": 0.9510216346153846,
+  "v17_digit": 0.121,
+  "hasard": 0.1,
+  "octets_par_lookup": 256,
+  "acces_disque_par_sequence": 1,
+  "acces_disque_par_token": 0.00390625,
+  "memoire_disque_Mo": 2.56
+}

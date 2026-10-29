@@ -1,0 +1,10 @@
+{
+  "model": "BlockLocalMem",
+  "ppl": 10.556843705326544,
+  "block_local_pur_ppl": 7.786,
+  "mem_slots": 65536,
+  "octets_lus_par_token_memoire": 4096,
+  "params_total": 4346880,
+  "params_memoire": 4194304,
+  "wall_s": 581.2218060493469
+}

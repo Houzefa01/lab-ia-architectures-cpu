@@ -1,0 +1,115 @@
+{
+  "model": "BlockLocalGlobal",
+  "device": "cpu",
+  "threads": 2,
+  "batch_size": 32,
+  "lengths": {
+    "48": {
+      "status": "ok",
+      "latency_ms": 32.51694701611996,
+      "latency_ms_all": [
+        31.51103699929081,
+        32.51694701611996,
+        40.734349982813,
+        37.783589999889955,
+        31.493999005760998
+      ],
+      "peak_ram_mb": 37.1875,
+      "tracemalloc_peak_mb": 0.008557,
+      "attn_matrix_theoretical_mb": 0.589824
+    },
+    "128": {
+      "status": "ok",
+      "latency_ms": 75.7416540000122,
+      "latency_ms_all": [
+        71.82807399658486,
+        75.7416540000122,
+        94.58645398262888,
+        95.80717000062577,
+        67.66862099175341
+      ],
+      "peak_ram_mb": 62.984375,
+      "tracemalloc_peak_mb": 0.008429,
+      "attn_matrix_theoretical_mb": 4.194304
+    },
+    "256": {
+      "status": "ok",
+      "latency_ms": 155.7860999892,
+      "latency_ms_all": [
+        144.95065301889554,
+        167.13536900351755,
+        155.7860999892,
+        141.17167799849994,
+        158.9374610048253
+      ],
+      "peak_ram_mb": 108.1328125,
+      "tracemalloc_peak_mb": 0.008429,
+      "attn_matrix_theoretical_mb": 16.777216
+    },
+    "512": {
+      "status": "ok",
+      "latency_ms": 313.5923909721896,
+      "latency_ms_all": [
+        316.04092300403863,
+        313.5923909721896,
+        314.9562100006733,
+        297.3734400002286,
+        306.5398929757066
+      ],
+      "peak_ram_mb": 196.05859375,
+      "tracemalloc_peak_mb": 0.008429,
+      "attn_matrix_theoretical_mb": 67.108864
+    },
+    "1024": {
+      "status": "ok",
+      "latency_ms": 573.7156200048048,
+      "latency_ms_all": [
+        658.8180389953777,
+        671.9792920048349,
+        545.777215011185,
+        548.0112849909347,
+        573.7156200048048
+      ],
+      "peak_ram_mb": 384.47265625,
+      "tracemalloc_peak_mb": 0.008429,
+      "attn_matrix_theoretical_mb": 268.435456
+    },
+    "2048": {
+      "status": "ok",
+      "latency_ms": 1213.6750979989301,
+      "latency_ms_all": [
+        1119.6665220195428,
+        1264.6834370098077,
+        1213.6750979989301,
+        1397.96876499895,
+        1167.3834880057257
+      ],
+      "peak_ram_mb": 752.71484375,
+      "tracemalloc_peak_mb": 0.008429,
+      "attn_matrix_theoretical_mb": 1073.741824
+    },
+    "4096": {
+      "status": "ok",
+      "latency_ms": 3430.8324989979155,
+      "latency_ms_all": [
+        3136.6876589891035,
+        3354.8738149984274,
+        3430.8324989979155,
+        3663.467670994578,
+        3623.944160004612
+      ],
+      "peak_ram_mb": 1108.94140625,
+      "tracemalloc_peak_mb": 0.008429,
+      "attn_matrix_theoretical_mb": 4294.967296
+    }
+  },
+  "weights_ram": {
+    "params_total": 418822,
+    "params_linear": 151616,
+    "fp32_MB": 1.675288,
+    "int8_MB": 1.22044,
+    "int4_MB": 1.144632,
+    "reduction_int8": 1.3726918160663368,
+    "reduction_int4": 1.463604022952355
+  }
+}

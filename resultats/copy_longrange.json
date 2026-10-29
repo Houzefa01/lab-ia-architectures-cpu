@@ -1,0 +1,71 @@
+{
+  "gap": 400,
+  "seq_len": 406,
+  "rf_local": 192,
+  "steps": 3000,
+  "batch": 16,
+  "blg_15_acc": 0.928,
+  "bl_14_acc": 0.02,
+  "blg_15_traj": [
+    {
+      "step": 0,
+      "acc": 0.026
+    },
+    {
+      "step": 500,
+      "acc": 0.022
+    },
+    {
+      "step": 1000,
+      "acc": 0.024
+    },
+    {
+      "step": 1500,
+      "acc": 0.018
+    },
+    {
+      "step": 2000,
+      "acc": 0.278
+    },
+    {
+      "step": 2500,
+      "acc": 0.916
+    },
+    {
+      "step": 2999,
+      "acc": 0.928
+    }
+  ],
+  "bl_14_traj": [
+    {
+      "step": 0,
+      "acc": 0.028
+    },
+    {
+      "step": 500,
+      "acc": 0.022
+    },
+    {
+      "step": 1000,
+      "acc": 0.024
+    },
+    {
+      "step": 1500,
+      "acc": 0.018
+    },
+    {
+      "step": 2000,
+      "acc": 0.02
+    },
+    {
+      "step": 2500,
+      "acc": 0.014
+    },
+    {
+      "step": 2999,
+      "acc": 0.02
+    }
+  ],
+  "blg_15_passed_95": false,
+  "verdict": "#15 < 95% -> m\u00e9moire lin\u00e9aire insuffisante pour rappel EXACT longue distance (honn\u00eate)"
+}

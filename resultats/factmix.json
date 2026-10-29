@@ -1,0 +1,13 @@
+{
+  "M": 1000,
+  "SEQ": 256,
+  "distance": 246,
+  "rf_local": 192,
+  "acc17_exact": 0.0,
+  "acc17_digit": 0.11572265625,
+  "acc14_exact": 0.0,
+  "acc14_digit": 0.14111328125,
+  "acces_hdd_par_token_17": 0.0234375,
+  "gate_ouvert_17": 0.12244635820388794,
+  "hasard_digit": 0.1
+}

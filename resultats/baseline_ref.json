@@ -1,0 +1,96 @@
+{
+  "model": "BaselineTransformer",
+  "device": "cpu",
+  "threads": 2,
+  "batch_size": 32,
+  "lengths": {
+    "48": {
+      "status": "ok",
+      "latency_ms": 13.728357007494196,
+      "latency_ms_all": [
+        14.021173992659897,
+        13.728357007494196,
+        12.545083998702466,
+        12.013559986371547,
+        15.191331011010334
+      ],
+      "peak_ram_mb": 23.7265625,
+      "tracemalloc_peak_mb": 0.004669,
+      "attn_matrix_theoretical_mb": 0.589824
+    },
+    "128": {
+      "status": "ok",
+      "latency_ms": 39.769243012415245,
+      "latency_ms_all": [
+        37.343387986766174,
+        37.210334005067125,
+        47.02341399388388,
+        39.769243012415245,
+        50.69967400049791
+      ],
+      "peak_ram_mb": 44.03125,
+      "tracemalloc_peak_mb": 0.004669,
+      "attn_matrix_theoretical_mb": 4.194304
+    },
+    "256": {
+      "status": "ok",
+      "latency_ms": 145.22375699016266,
+      "latency_ms_all": [
+        149.59076399100013,
+        142.12073900853284,
+        135.4249569994863,
+        145.22375699016266,
+        192.2995540080592
+      ],
+      "peak_ram_mb": 109.9140625,
+      "tracemalloc_peak_mb": 0.004669,
+      "attn_matrix_theoretical_mb": 16.777216
+    },
+    "512": {
+      "status": "ok",
+      "latency_ms": 557.2279949847143,
+      "latency_ms_all": [
+        557.2279949847143,
+        549.9984129855875,
+        557.3992529825773,
+        559.2908209946472,
+        535.8461889845785
+      ],
+      "peak_ram_mb": 250.01171875,
+      "tracemalloc_peak_mb": 0.004669,
+      "attn_matrix_theoretical_mb": 67.108864
+    },
+    "1024": {
+      "status": "ok",
+      "latency_ms": 2103.040537011111,
+      "latency_ms_all": [
+        2063.0191620148253,
+        2123.3564790163655,
+        2103.040537011111,
+        2219.8545989813283,
+        2064.6808090095874
+      ],
+      "peak_ram_mb": 646.41796875,
+      "tracemalloc_peak_mb": 0.004669,
+      "attn_matrix_theoretical_mb": 268.435456
+    },
+    "2048": {
+      "status": "ok",
+      "latency_ms": 10632.153113983804,
+      "latency_ms_all": [
+        13746.898957993835,
+        10632.153113983804,
+        10208.409987011692,
+        12438.603386020986,
+        7797.195271006785
+      ],
+      "peak_ram_mb": 2286.91015625,
+      "tracemalloc_peak_mb": 0.004669,
+      "attn_matrix_theoretical_mb": 1073.741824
+    },
+    "4096": {
+      "status": "oom",
+      "reason": "subprocess exitcode=-9 (likely OOM-killed)"
+    }
+  }
+}
